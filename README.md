@@ -4,6 +4,9 @@
 
 국민대학교 AI빅데이터융합경영학과 머신러닝(2023) 과정에서 수행한 **팀 그룹과제(Salary 회귀·Pipeline)** 와 **KML Challenge 2023F(패널 설문 응답 예측)** 작업을 프로젝트별 폴더로 분리해 정리하였다.
 
+- **01_course_salary_regression:** 독립변수로 임금(Salary)을 예측하며, 피처 엔지니어링부터 CatBoost·선형·트리/MLP Pipeline과 OOF·Voting 앙상블까지 sklearn Pipeline 기반으로 비교·구현하였다.
+- **02_kml_challenge_2023f:** 패널·설문 특성을 활용해 온라인 설문 응답 여부(STATUS)를 분류 예측하고, 피처 엔지니어링·튜닝·Hard Voting·OOF·DNN 앙상블까지 확장 실험하였다.
+
 ---
 
 ## 저장소 구성 (2개 프로젝트)
@@ -19,7 +22,7 @@
 
 ### 목적
 
-과제 1·2에서 다룬 임금 예측 문제에 대해, **피처 엔지니어링 → ColumnTransformer·Pipeline → OOF·Voting 앙상블**까지 한 흐름으로 구현하는 것이 목표이이다. CatBoost·선형모형·OneHot+트리/MLP 등 서로 다른 Pipeline 패턴을 비교한다.
+이전의 과제에서 다룬 임금 예측 문제에 대해, **피처 엔지니어링 → ColumnTransformer·Pipeline → OOF·Voting 앙상블**까지 한 흐름으로 구현한다. CatBoost·선형모형·OneHot+트리/MLP 등 서로 다른 Pipeline 패턴을 비교한다.
 
 ### 주요 노트북
 
@@ -33,7 +36,7 @@
 
 ### 데이터
 
-수업 제공 CSV(`X_train`, `y_train`, `X_test`)는 **저작권 문제로 미포함**. [`01_course_salary_regression/data/README.md`](01_course_salary_regression/data/README.md) 참고.
+수업에서 제공된 데이터(`X_train`, `y_train`, `X_test`)는 **저작권 문제로 미포함**.
 
 ---
 
@@ -64,7 +67,7 @@
 
 ### 데이터
 
-대회 `train.csv` / `test.csv`는 [`02_kml_challenge_2023f/data/`](02_kml_challenge_2023f/data/)에 둔다. 자세한 안내는 [`data/README.md`](02_kml_challenge_2023f/data/README.md)를 본다.
+대회에 사용된 데이터 `train.csv` / `test.csv`는 **저작권 문제로 미포함**.
 
 ---
 
@@ -104,5 +107,5 @@ MachineLearningClass/
 
 ## 기술 스택
 
-- **Python:** pandas, scikit-learn, category_encoders, LightGBM, CatBoost, XGBoost, Optuna, SHAP(일부 노트북), PyTorch/Keras( DNN 노트북)
+- **Python:** pandas, scikit-learn, category_encoders, LightGBM, CatBoost, XGBoost, Optuna, SHAP(일부 노트북), PyTorch/Keras(DNN 노트북)
 - **R:** (본 저장소에는 미포함)
